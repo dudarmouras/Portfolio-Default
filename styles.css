@@ -1,0 +1,107 @@
+/* Estilo geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Code Pro", monospace;
+}
+
+body{
+    background-color: #FFFFFF;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Estilo do cabeçalho */
+header{
+    padding: 40px 4%;
+    background-color: #C53B63;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #FFFFFF; 
+}
+
+header img{
+    width: 200px;
+    height: 60px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #e36e36;
+    border: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* font-family: "Source Code Pro", monospace; */
+
+/* Estilo do rodapé */
+
+footer{
+    padding: 60px 4%;
+    background-color: #C53B63;
+    box-shadow: 0 0 40px #9012e4;
+}
+
+footer img{
+    width: 200px;
+    height: 60px;
+}
+
+footer > .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .linha p i{
+    color:#9012e4;
+    font-size: 22px;
+}
+
+footer .linha{
+    padding: 20px 0;
+    border-bottom: 1px solid #9012e4;
+}
+
+footer .linha p a{
+    color:#e36e36;
+    font-size: 22px;
+}
+
+.social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border:none;
+    background-color: #9012e4;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
