@@ -37,7 +37,32 @@
     </header>
 
     <main>
+        <section class="formulario">
+            <div class="interface">
 
+                <h2 class="titulo">Bora <span>conversar?</span></h2>
+
+                <div class="flex-contato">
+                    <div class="img-bolha">
+                        <img src="/assets/bubble.png" alt="Bolha">
+                    </div>
+
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="121ea3c8-229a-4796-b9b6-6b9efa321089">
+
+                        <input type="text" name="nome" id="" placeholder="Digite seu nome:" required>
+
+                        <input type="text" name="email" id="" placeholder="Digite seu e-mail:" required>
+
+                        <input type="text" name="celular" id="" placeholder="Digite seu celular:" required>
+
+                        <textarea name="mensagem" placeholder="No que posso te ajudar?" required></textarea>
+                    
+                        <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer>

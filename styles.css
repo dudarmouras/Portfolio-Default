@@ -132,3 +132,104 @@ footer img{
 .contato-footer a:hover {
     text-decoration: wavy;
 }
+
+/* Formulário */
+section.formulario {
+    padding: 80px 4%;
+    background-color: #f4daec;
+}
+
+.titulo {
+    color: #000;
+    font-size: 38px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.titulo span {
+    color: #C53B63;
+    font-weight: bold;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #deb0ec;
+    border: 0;
+    outline:0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #252525;
+    font-size: 18px;
+    transition: .2s;
+}
+
+form input:focus, form textarea:focus {
+    background-color: #fff;
+    border-color: #C53B63;
+    box-shadow: 0 0 15px rgba(153, 19, 194, 0.3);
+}
+
+form .btn-enviar {
+    margin-top: 10px;
+    text-align: center;
+}
+ 
+form .btn-enviar input[type="submit"] {
+    width: 180px;
+    background-color: #9913c2;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0px 4px 15px rgba(153, 19, 194, 0.3);
+}
+
+form .btn-enviar input[type="submit"]:hover {
+    background-color: #e36e36; 
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 20px rgba(197, 59, 99, 0.4);
+}
+
+/* Bolha +  form*/
+.flex-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px; 
+    margin-top: 50px;
+}
+
+.img-bolha img {
+    max-width: 350px; 
+    animation: flutuar 3s ease-in-out infinite;
+    margin-top: -70px;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-contato {
+        flex-direction: column;
+    }
+}
