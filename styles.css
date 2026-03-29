@@ -64,11 +64,7 @@ header .btn-contato button:hover{
     transform: translateY(-5px);
 }
 
-/* font-family: "Source Code Pro", monospace; */
-
-/* Estilo do rodapé */
-/* Estilo do rodapé */
-
+/* Estilo do Footer */
 footer {
     padding: 60px 4%;
     background-color: #C53B63;
@@ -228,8 +224,135 @@ form {
     width: 100%;
 }
 
+/* Responsividade */
 @media screen and (max-width: 768px) {
     .flex-contato {
         flex-direction: column;
     }
+}
+
+/* Seção de Projetos */
+section.projetos {
+    padding: 100px 4%;
+    background-color: #f4daec;
+    box-shadow: 0 10px 20px rgba(153, 19, 194, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.carrossel-container {
+    margin-top: 50px;
+    overflow-x: auto;
+    padding: 40px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #C53B63 #f4daec;
+}
+
+.carrossel-container::-webkit-scrollbar {
+     height: 8px; 
+    }
+
+.carrossel-container::-webkit-scrollbar-thumb { 
+    background: #9913c2;
+    border-radius: 10px; 
+}
+
+.flex-projetos {
+    display: flex;
+    gap: 30px;
+    scroll-snap-type: x mandatory;
+}
+
+.card-projeto {
+    min-width: 350px;
+    min-height: 380px;
+    background: linear-gradient(135deg, #f4daec 0%, #deb0ec 100%); 
+    border-radius: 20px;
+    border: 2px solid #C53B63;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    scroll-snap-align: start;
+    box-shadow: 0 10px 20px rgba(153, 19, 194, 0.1);
+    animation: flutuar 4s ease-in-out infinite;
+    transition: transform 0.3s;
+}
+
+.card-projeto:nth-child(even) {
+    animation-delay: 1s;
+    background: linear-gradient(135deg, #fff 0%, #f4daec 100%);
+}
+
+.card-projeto:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(197, 59, 99, 0.3);
+}
+
+.conteudo-projeto h3 {
+    font-size: 26px;
+    color: #9913c2; 
+    margin-bottom: 15px;
+}
+
+.conteudo-projeto p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Tags */
+.tags {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tags span {
+    background-color: #C53B63;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Botões */
+.botoes-projeto button {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Link do deploy */
+.btn-visitar {
+    background-color: #e36e36; 
+    color: #fff;
+}
+
+/* Link no Github */
+.btn-codigo {
+    background-color: #9913c2;
+    color: #fff;
+}
+
+.botoes-projeto button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    .card-projeto { min-width: calc(50% - 15px); }
+}
+
+@media screen and (max-width: 768px) {
+    .card-projeto { min-width: 100%; }
 }
