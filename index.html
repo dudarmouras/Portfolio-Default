@@ -15,21 +15,21 @@
     <header>
         <div class="interface">
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <img src="/assets/diva.png" alt="Logo do diva">
                 </a>
             </div>
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Sobre mim</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Ferramentas</a></li>
+                    <li><a href="#sobre-mim">Sobre mim</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </nav>
 
             <div class="btn-contato">
-                <a href="#">
+                <a href="#formulario">
                     <button>Contato</button>
                 </a>
             </div>
@@ -38,7 +38,7 @@
     </header>
 
     <main>  
-        <section class="topo-do-site">
+        <section class="topo-do-site" id="sobre-mim">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
@@ -52,13 +52,13 @@
             </div>
         </section>
 
-        <section class="marquee-section">
-            <div class="marquee-header">
-              <p class="marquee-label">TECNOLOGIAS</p>
+        <section class="tecnologias" id="tecnologias">
+            <div class="header-tecnologias">
+              <p class="titulo-tecnologias">TECNOLOGIAS</p>
             </div>
           
-            <div class="marquee-wrapper" id="marquee-wrapper">
-              <div class="marquee-track" id="marquee-track">
+            <div class="scroll-tecnologias" id="scroll-tecnologias">
+              <div class="tecnologias-img" id="tecnologias-img">
                 <i class="devicon-nodejs-plain colored"></i>
                 <i class="devicon-python-plain colored"></i>
                 <i class="devicon-typescript-plain colored"></i>
@@ -73,7 +73,7 @@
             </div>
           </section>
         
-        <section class="projetos">
+        <section class="projetos" id="projetos">
             <div class="interface">
                 <h2 class="titulo">MEU PORTFÓLIO</h2>
                 
@@ -148,7 +148,7 @@
             </div>
         </section>
 
-        <section class="formulario">
+        <section class="formulario" id="formulario">
             <div class="interface">
 
                 <h2 class="titulo">Bora conversar?</h2>
@@ -196,8 +196,8 @@
 
     <script>
         (function () {
-          var track = document.getElementById("marquee-track");
-          var wrapper = document.getElementById("marquee-wrapper");
+          var track = document.getElementById("tecnologias-img");
+          var wrapper = document.getElementById("scroll-tecnologias");
       
           if (!track || !wrapper) return;
       

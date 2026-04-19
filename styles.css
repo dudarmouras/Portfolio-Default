@@ -1,6 +1,10 @@
 /* font-family: "Source Code Pro", monospace; */
 
 /* Estilo geral */
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -408,17 +412,17 @@ section.projetos {
 }
 
 /* Marquee das tecnologias */
-.marquee-section {
+.tecnologias {
     padding: 60px 4%;
     background-color: #fff;
 }
 
-.marquee-header {
+.header-tecnologias {
     max-width: 1280px;
     margin: 0 auto 40px;
 }
 
-.marquee-label {
+.titulo-tecnologias {
     font-size: 40px;
     display: flex;
     justify-content: center;
@@ -436,7 +440,7 @@ section.projetos {
     -webkit-text-fill-color: transparent;
 }
 
-.marquee-wrapper {
+.scroll-tecnologias {
     width: 100%;
     overflow: hidden;
     padding: 25px 0;
@@ -452,7 +456,7 @@ section.projetos {
     ) 1;
 }
 
-.marquee-track {
+.tecnologias-img {
     display: flex;
     align-items: center;
     gap: 80px;
@@ -461,14 +465,14 @@ section.projetos {
 }
 
 /* Cards das tecnologias */
-.marquee-track i {
+.tecnologias-img i {
     font-size: 45px;
     flex-shrink: 0;
     opacity: 0.8;
     transition: 0.3s;
 }
 
-.marquee-track i:hover {
+.tecnologias-img i:hover {
     opacity: 1;
     transform: translateY(-6px) scale(1.1);
     cursor: pointer;
