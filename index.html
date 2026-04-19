@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
     <header>
@@ -43,22 +44,38 @@
                     <div class="txt-topo-site">
                         <h1>CODANDO O FUTURO COM MULHERES QUE FAZEM A DIFERENÇA<span>.</span></h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                        <div class="btn-contato2">
-                            <a href="#">
-                                <button>Entre em contato</button>
-                            </a>
-                        </div>
                     </div>
                     <div class="img-topo-site">
-                        <img src="./assets/ada-lovelace.png" alt="Ada Lovelace">
+                        <img src="./assets/ada-lovelace-borda.png" alt="Ada Lovelace">
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="marquee-section">
+            <div class="marquee-header">
+              <p class="marquee-label">TECNOLOGIAS</p>
+            </div>
+          
+            <div class="marquee-wrapper" id="marquee-wrapper">
+              <div class="marquee-track" id="marquee-track">
+                <i class="devicon-nodejs-plain colored"></i>
+                <i class="devicon-python-plain colored"></i>
+                <i class="devicon-typescript-plain colored"></i>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-prisma-original colored"></i>
+                <i class="devicon-docker-plain colored"></i>
+                <i class="devicon-tailwindcss-plain colored"></i>
+              </div>
+            </div>
+          </section>
         
         <section class="projetos">
             <div class="interface">
-                <h2 class="titulo">Meu <span>Portfolio</span></h2>
+                <h2 class="titulo">MEU PORTFÓLIO</h2>
                 
                 <div class="carrossel-container">
                     <div class="flex-projetos">
@@ -134,7 +151,7 @@
         <section class="formulario">
             <div class="interface">
 
-                <h2 class="titulo">Bora <span>conversar?</span></h2>
+                <h2 class="titulo">Bora conversar?</h2>
 
                 <div class="flex-contato">
                     <div class="img-bolha">
@@ -174,6 +191,63 @@
             </div><div class="contato-footer">
                 <p><i class="bi bi-envelope-fill"></i> <a href="mailto:diva@gmail.com.br">diva@gmail.com.br</a></p>
             </div>
-        </div></footer>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+          var track = document.getElementById("marquee-track");
+          var wrapper = document.getElementById("marquee-wrapper");
+      
+          if (!track || !wrapper) return;
+      
+          var original = track.innerHTML;
+          var speed = 0.6;
+          var pos = 0;
+          var blockWidth = 0;
+      
+          function init() {
+            track.innerHTML = original;
+      
+            var kids = track.children;
+            var gap = 30;
+            var w = 0;
+      
+            for (var i = 0; i < kids.length; i++) {
+              w += kids[i].getBoundingClientRect().width + gap;
+            }
+      
+            blockWidth = w;
+      
+            var needed = Math.ceil((window.innerWidth * 2) / blockWidth) + 2;
+            needed = Math.max(needed, 4);
+      
+            var html = "";
+            for (var c = 0; c < needed; c++) {
+              html += original;
+            }
+      
+            track.innerHTML = html;
+            pos = 0;
+            track.style.transform = "translateX(0px)";
+      
+            requestAnimationFrame(animate);
+          }
+      
+          function animate() {
+            pos += speed;
+      
+            if (pos >= blockWidth) {
+              pos -= blockWidth;
+            }
+      
+            track.style.transform = "translateX(-" + pos + "px)";
+            requestAnimationFrame(animate);
+          }
+      
+          window.addEventListener("load", init);
+          window.addEventListener("resize", init);
+        })();
+      </script>
 </body>
 </html>
